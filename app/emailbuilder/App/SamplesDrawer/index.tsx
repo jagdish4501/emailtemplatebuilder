@@ -8,7 +8,6 @@ export const SAMPLES_DRAWER_WIDTH = 240;
 
 export default function SamplesDrawer() {
   const samplesDrawerOpen = useSamplesDrawerOpen();
-
   return (
     <Box
       sx={{

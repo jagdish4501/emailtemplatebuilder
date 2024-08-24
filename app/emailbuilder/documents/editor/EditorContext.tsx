@@ -15,27 +15,18 @@ type TValue = {
 };
 
 const editorStateStore = create<TValue>(() => ({
-  document: getConfiguration(window.location.hash),
-  documentId: "",
+  document: getConfiguration(""),
+  documentId: "template-name",
   selectedBlockId: null,
   selectedSidebarTab: "styles",
   selectedMainTab: "editor",
   selectedScreenSize: "desktop",
-
   inspectorDrawerOpen: true,
-  samplesDrawerOpen: true,
+  samplesDrawerOpen: false,
 }));
 
 export function useDocument() {
   return editorStateStore((s) => s.document);
-}
-
-export function useDocumentId() {
-  return editorStateStore((s) => s.documentId); // Getter
-}
-
-export function setDocumentId(documentId: string) {
-  return editorStateStore.setState({ documentId }); // Setter
 }
 
 export function useSelectedBlockId() {
@@ -118,4 +109,12 @@ export function setSelectedScreenSize(
   selectedScreenSize: TValue["selectedScreenSize"]
 ) {
   return editorStateStore.setState({ selectedScreenSize });
+}
+
+export function useDocumentId() {
+  return editorStateStore((s) => s.documentId); // Getter
+}
+
+export function setDocumentId(documentId: string) {
+  return editorStateStore.setState({ documentId }); // Setter
 }

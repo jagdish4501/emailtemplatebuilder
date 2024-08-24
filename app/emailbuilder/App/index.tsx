@@ -40,7 +40,6 @@ export default function App() {
   return (
     <Stack>
       <InspectorDrawer />
-      <SamplesDrawer />
       <Stack
         sx={{
           marginRight: inspectorDrawerOpen ? `${INSPECTOR_DRAWER_WIDTH}px` : 0,
