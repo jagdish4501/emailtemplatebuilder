@@ -1,10 +1,9 @@
-"use client";
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import { TEditorBlock } from "../../../editor/core";
-import EditorBlock from "../../../editor/EditorBlock";
+import { TEditorBlock } from '../../../editor/core';
+import EditorBlock from '../../../editor/EditorBlock';
 
-import AddBlockButton from "./AddBlockMenu";
+import AddBlockButton from './AddBlockMenu';
 
 export type EditorChildrenChange = {
   blockId: string;
@@ -20,10 +19,7 @@ export type EditorChildrenIdsProps = {
   childrenIds: string[] | null | undefined;
   onChange: (val: EditorChildrenChange) => void;
 };
-export default function EditorChildrenIds({
-  childrenIds,
-  onChange,
-}: EditorChildrenIdsProps) {
+export default function EditorChildrenIds({ childrenIds, onChange }: EditorChildrenIdsProps) {
   const appendBlock = (block: TEditorBlock) => {
     const blockId = generateId();
     return onChange({

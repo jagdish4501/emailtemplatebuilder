@@ -1,5 +1,5 @@
-"use client";
 import { create } from "zustand";
+
 import getConfiguration from "../../getConfiguration";
 
 import { TEditorConfiguration } from "./core";

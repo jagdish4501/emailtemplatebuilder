@@ -1,7 +1,6 @@
-"use client";
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { FormControlLabel, Switch } from "@mui/material";
+import { FormControlLabel, Switch } from '@mui/material';
 
 type Props = {
   label: string;
