@@ -22,6 +22,7 @@ import ToggleInspectorPanelButton from "../InspectorDrawer/ToggleInspectorPanelB
 import ToggleSamplesPanelButton from "../SamplesDrawer/ToggleSamplesPanelButton";
 
 import DownloadJson from "./DownloadJson";
+import SaveJson from "./Savejson";
 import HtmlPanel from "./HtmlPanel";
 import ImportJson from "./ImportJson";
 import JsonPanel from "./JsonPanel";
@@ -109,6 +110,7 @@ export default function TemplatePanel() {
             <MainTabsGroup />
           </Stack>
           <Stack direction="row" spacing={2}>
+            <SaveJson />
             <DownloadJson />
             <ImportJson />
             <ToggleButtonGroup

@@ -1,11 +1,10 @@
 import { create } from "zustand";
-
 import getConfiguration from "../../getConfiguration";
-
 import { TEditorConfiguration } from "./core";
 
 type TValue = {
   document: TEditorConfiguration;
+  documentId: string;
   selectedBlockId: string | null;
   selectedSidebarTab: "block-configuration" | "styles";
   selectedMainTab: "editor" | "preview" | "json" | "html";
@@ -17,6 +16,7 @@ type TValue = {
 
 const editorStateStore = create<TValue>(() => ({
   document: getConfiguration(window.location.hash),
+  documentId: "",
   selectedBlockId: null,
   selectedSidebarTab: "styles",
   selectedMainTab: "editor",
@@ -28,6 +28,14 @@ const editorStateStore = create<TValue>(() => ({
 
 export function useDocument() {
   return editorStateStore((s) => s.document);
+}
+
+export function useDocumentId() {
+  return editorStateStore((s) => s.documentId); // Getter
+}
+
+export function setDocumentId(documentId: string) {
+  return editorStateStore.setState({ documentId }); // Setter
 }
 
 export function useSelectedBlockId() {
