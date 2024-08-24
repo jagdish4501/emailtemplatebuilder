@@ -1,17 +1,6 @@
 import React from "react";
-
-import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
-
+import { Box, Button, Divider, Link, Stack, Typography } from "@mui/material";
 import { useSamplesDrawerOpen } from "../../documents/editor/EditorContext";
-
 import SidebarButton from "./SidebarButton";
 import logo from "./waypoint.svg";
 
@@ -21,19 +10,21 @@ export default function SamplesDrawer() {
   const samplesDrawerOpen = useSamplesDrawerOpen();
 
   return (
-    <Drawer
-      variant="persistent"
-      anchor="left"
-      open={samplesDrawerOpen}
+    <Box
       sx={{
+        position: "fixed",
+        left: 0,
         width: samplesDrawerOpen ? SAMPLES_DRAWER_WIDTH : 0,
+        display: samplesDrawerOpen ? "block" : "none",
+        transition: "width 0.3s",
+        overflow: "hidden",
       }}
     >
       <Stack
         spacing={3}
         py={1}
         px={2}
-        width={SAMPLES_DRAWER_WIDTH}
+        width="100%"
         justifyContent="space-between"
         height="100%"
       >
@@ -101,7 +92,7 @@ export default function SamplesDrawer() {
             target="_blank"
             sx={{ lineHeight: 1 }}
           >
-            <Box component="img" src={logo} width={32} />
+            <Box component="img" src={logo.src} width={32} />
           </Link>
           <Box>
             <Typography variant="overline" gutterBottom>
@@ -124,6 +115,6 @@ export default function SamplesDrawer() {
           </Button>
         </Stack>
       </Stack>
-    </Drawer>
+    </Box>
   );
 }

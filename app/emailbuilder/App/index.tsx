@@ -38,7 +38,7 @@ export default function App() {
   );
 
   return (
-    <Stack>
+    <Stack sx={{ marginTop: "40px" }}>
       <InspectorDrawer />
       <SamplesDrawer />
       <Stack
