@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Drawer, Hidden, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 
 import {
   setSidebarTab,
@@ -10,7 +10,6 @@ import {
 
 import ConfigurationPanel from "./ConfigurationPanel";
 import StylesPanel from "./StylesPanel";
-import { Block } from "@mui/icons-material";
 
 export const INSPECTOR_DRAWER_WIDTH = 320;
 
