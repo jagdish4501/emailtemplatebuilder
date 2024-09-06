@@ -26,11 +26,13 @@
     "@usewaypoint/document-core": "^0.0.6",
     "@usewaypoint/email-builder": "^0.0.8",
     "highlight.js": "^11.10.0",
+    "lodash": "^4.17.21",
     "next": "14.2.5",
     "prettier": "^3.3.3",
     "react": "^18",
     "react-colorful": "^5.6.1",
     "react-dom": "^18",
+    "react-email-editor": "^1.7.11",
     "zod": "^3.23.8",
     "zustand": "^4.5.5"
   },
